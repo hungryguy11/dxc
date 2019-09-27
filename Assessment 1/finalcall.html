@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="C:\Users\croy20\Downloads\bootstrap-3.3.7-dist\bootstrap-3.3.7-dist\css\bootstrap.css">
+
+    <title>Assessment</title>
+    <link rel="stylesheet" href="finalcall.css">
+</head>
+
+<body>
+    <div class="container" id="contain">
+        <div>
+            <form action="" class=form-group>
+                <div class="col-md-12" id=>
+                    <h2 class=" text-danger">Registration Form</h2>
+                    <hr>
+                    <div class="col-md-5 " id="labels">
+                        <label for="uname">UserID:</label><br><br>
+                        <label for="psw">Password:</label><br><br>
+                        <label for="cpsw">Confirm Password:</label><br><br>
+                        <label for="nam">Name:</label><br><br>
+                        <label for="address">Address:</label><br><br>
+                        <label for="country">Country:</label><br><br>
+                        <label for="zip" style="margin-top: 5px">Zip Code:</label><br><br>
+                        <label for="email" style="margin-top: 5px; margin-bottom: -5px">Email:</label><br><br>
+                        <label for="sex" style="margin-bottom: -5px">Sex:</label><br><br>
+                        <label for="lang" style="margin-top: 3px">Language:</label><br><br>
+                        <label for="about">About:</label><br><br>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" id="uname" name="uname" placeholder=""><span style="display:inline-block" id="u-id"></span><br><br>
+                        <input type="password" id="psw" name="psw" placeholder=""><span id="pw" style="display:inline-block"></span><br><br>
+                        <input type="password" id="cpsw" name="cpsw" placeholder=""><span id="cpw" style="display:inline-block"></span><br><br>
+                        <input type="text" id="nam" name="nam" placeholder=""><span id="names" style="display:inline-block"></span><br><br>
+                        <input type="text" id="address" name="address" placeholder=""><br><br>
+                        <input type="text" id="country" name="country" placeholder="(Please select a country)" list="region" required><span style="display:inline-block" id="reg"></span><br><br>
+                        <datalist id="region">
+                        <option value="Algeria"></option>
+                        <option value="Bulgaria"></option>
+                        <option value="Canada"></option>
+                        <option value="Denmark"></option>
+                        <option value="Egypt"></option>
+                        <option value="Finland"></option>
+                        <option value="Ghana"></option>
+                        <option value="Honduras"></option>
+                        <option value="Italy"></option>
+                        <option value="India"></option>
+                        <option value="Other"></option>
+                        </datalist>
+
+                        <input type="text" id="zip" name="zip" placeholder=""><span id="zipc" style="display:inline-block"></span><br><br>
+                        <input type="text" id="email" name="email" placeholder=""><span id="e-id" style="display:inline-block"></span><br><br>
+                        <input type="radio" id="female" name="sex" value="Female" placeholder="" required>Female
+                        <input type="radio" id="male" name="sex" value="Male" placeholder="" required>Male
+                        <input type="radio" id="other" name="sex" value="Other" placeholder="" required>Other<span style="display:inline-block" id="gender"></span><br><br>
+                        <input type="checkbox" id="eng" name="lang" value="english" placeholder="">English
+                        <input type="checkbox" id="non-eng" name="lang" value="non-english" placeholder="">Non-English<span style="display:inline-block" id="language"></span><br><br>
+                        <textarea cols="22" rows="10" placeholder="Optional"></textarea>
+                    </div>
+
+                    <center>
+                        <div id="button">
+                            <input type="button" value="Validate" class="btn btn-success" onclick="checkdetails()">
+                            <!-- <input type="submit" value="Submit" class="btn btn-success" onclick="checkdetails()"> -->
+                        </div>
+                    </center>
+
+                    <div id="result"></div>
+
+                </div>
+            </form>
+        </div>
+
+    </div>
+    <script src="finalcall.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="C:\Users\croy20\Downloads\bootstrap-3.3.7-dist\bootstrap-3.3.7-dist\js\bootstrap.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+.container {
+    background-color: bisque;
+}
+
+#labels {
+    text-align: right;
+}
+
+#contain {
+    border: 2px solid black;
+    width: 70%;
+    border-radius: 5%;
+    margin-top: 10px;
+}
+
+h2 {
+    text-align: center;
+    background-color: yellow;
+}
+
+span {
+    margin-left: 10px;
+    height: 10px;
+}
