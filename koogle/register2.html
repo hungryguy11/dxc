@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Phone Details</title>
+</head>
+<link rel="stylesheet" type="text/css" href="style7.css">
+
+<body>
+    <center>
+        <form action="register3.html" style="border:0px dotted ">
+            <div class="contactinfo">
+                <img src="C:\Users\croy20\Downloads\koogle.jpg" />
+                <h3>Step 2-Validate and Proceed</h3>
+
+                <hr>
+
+                <h4>Contact Information</h4>
+                <label for="region"></label>
+                <input name="region" id="region" type="text" list="country" placeholder="Specify Region">
+                <datalist id="country">
+                            <option value="Algeria"></option>
+                            <option value="Bulgaria"></option>
+                            <option value="Canada"></option>
+                            <option value="Denmark"></option>
+                            <option value="Egypt"></option>
+                            <option value="Finland"></option>
+                            <option value="Ghana"></option>
+                            <option value="Honduras"></option>
+                            <option value="Italy"></option>
+                            <option value="India"></option>
+                            <option value="Other"></option>
+                        </datalist>
+
+                <label for="contactno"></label>
+                <input name="contactno" id="contactno" type="text" minlength="10" maxlength="10" required pattern="[0-9]+" placeholder="Contact no.">
+
+            </div>
+            <div class="next">
+                <button type="reset" class="cancelbtn">Cancel</button>
+                <button type="submit" class="validatebtn">Proceed</button>
+
+            </div>
+    </center>
+</body>
+
+</html>

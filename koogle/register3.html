@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Security Question
+    </title>
+</head>
+<link rel="stylesheet" type="text/css" href="style7.css">
+
+<body>
+    <center>
+        <form action="" target="" style="border:0px dotted">
+            <div class="security">
+                <img src="C:\Users\croy20\Downloads\koogle.jpg" />
+                <h3>Step 3-Validate and Proceed</h3>
+
+                <hr>
+                <h4>Security Question</h4>
+                <label for="questions">Select a question:</label>
+                <select name="questions">
+                        <option name="questions" value="1">What is your favourite colour?</option>
+                        <option name="questions" value="2">What is your favourite subject?</option>
+                        <option name="questions" value="3">Where were you born?</option>
+                    </select>
+                <br>
+
+                <label for="securea">Give unique answer</label>
+                <input type="text" id="securea" name="securea" required pattern="[a-zA-z]+">
+
+            </div>
+
+            <div class="next">
+                <button type="reset" class="cancelbtn">Cancel</button>
+                <button type="submit" class="validatebtn">Proceed</button>
+
+
+            </div>
+        </form>
+    </center>
+</body>
+
+</html>

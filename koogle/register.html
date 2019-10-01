@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Registration
+    </title>
+    <link rel="stylesheet" type="text/css" href="style7.css">
+
+
+</head>
+
+<body>
+
+
+    <!-- <iframe name="iframe-a" margin-left="200px" width="500px" height="400px" frameborder="20px"></iframe> -->
+
+    <center>
+        <form action="register2.html" style="border:0px dotted">
+            <div class="details">
+                <img src="C:\Users\croy20\Downloads\koogle.jpg" />
+
+                <h3>Step 1-Validate and Proceed</h3>
+                <p><b>Create a Koogle Account</b></p>
+                <hr>
+                <h4>Basic Details</h4>
+                <label for="fname"></label>
+                <input type="text" placeholder="Enter Firstname" minlength="5" name="fname" required pattern="[a-zA-Z]+">
+
+                <label for="lname"></label>
+                <input type="text" placeholder="Enter Lastname" minlength="3" name="lname" required pattern="[a-zA-Z]+">
+
+                <label for="uname"></label>
+                <input type="text" size="" placeholder="Username" name="uname" required pattern="[a-zA-z0-9.]+">
+
+                <label for="psw"></label>
+                <input type="password" placeholder="Enter Password" name="psw" min="8" required>
+
+                <!-- <label for="psw-repeat" ></label>
+                    <input type="password" placeholder="Confirm Password"  name="psw-repeat"  required> -->
+            </div>
+
+            <div class="next">
+                <button type="submit" class="validatebtn">Proceed</button>
+                <button type="reset" class="cancelbtn">Cancel</button>
+
+
+            </div>
+        </form>
+    </center>
+
+
+
+
+</body>
+
+</html>
