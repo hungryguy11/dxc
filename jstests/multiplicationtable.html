@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="C:\Users\croy20\Downloads\bootstrap-3.3.7-dist\bootstrap-3.3.7-dist\css\bootstrap.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="C:\Users\croy20\Downloads\bootstrap-3.3.7-dist\bootstrap-3.3.7-dist\js\bootstrap.min.js"></script>
+    <title>Multiplication Tables</title>
+</head>
+
+<script type="text/javascript">
+    function create() {
+        var x = Number(document.getElementById("txt1").value);
+        var y = Number(document.getElementById("txt2").value);
+        // document.write('<table  class="table-group">');
+        document.write('<body style="background-image: url(http://thinkbroader.club/wp-content/uploads//2019/01/number-wallpaper-math-abstract-math-number-background-vector-illustration-for-business-design-algebra-arithmetic-art-backdrop-white-black-wallpaper-random-number-border-and-math-solver-graph.jpg)">');
+        document.write('<center><table class="table table-bordered">');
+        document.write('<thead>');
+        document.write('<tr style="background-color:cyan">');
+        document.write('<th style"text-align:center" colspan="5"><h1 ><font color="maroon">TABLES<font></h1></th>');
+        document.write('</tr>');
+        document.write('<tbody>');
+
+
+
+
+
+
+        for (var i = 0; i < y; i++) {
+            if (i % 2 == 0)
+                document.write('<tr style="background-color:orange">');
+            else
+                document.write('<tr style="background-color:yellow">');
+            document.write('<td style="border:0.01px solid black; font-size:34">' + x + '</td>');
+            document.write('<td style="border:0.01px solid black; font-size:34">X</td>');
+            document.write('<td style="border:0.01px solid black; font-size:34">' + i + '</td>');
+            document.write('<td style="border:0.01px solid black; font-size:34"><font color=blue>=</font></td>')
+            document.write('<td style="border:0.01px solid black; font-size:34">' + (x * i) + '</td>');
+            document.write('</tr>');
+
+        }
+        document.write('</body>');
+        document.write('</table></center>');
+    }
+</script>
+
+<body style="background-image: url('http://thinkbroader.club/wp-content/uploads//2019/01/number-wallpaper-math-abstract-math-number-background-vector-illustration-for-business-design-algebra-arithmetic-art-backdrop-white-black-wallpaper-random-number-border-and-math-solver-graph.jpg')">
+
+    <form>
+
+        <div class=" form-group col-md-6 " style="top:40px">
+            <label for="txt1" class="text-info "></label>
+            <input id="txt1" class=" form-control" type="text " name=" " placeholder="Enter the no.  for multiplicaton table:">
+        </div>
+
+        <div class=" form-group col-md-6 " style="top:40px">
+            <label for="txt2" class="text-info"></label>
+            <input id="txt2" class=" form-control" type="text " name=" " placeholder="Enter no. of rows:">
+        </div>
+        <div class="col-md-12 text-center" style="top:40px">
+            <input type="button" class="btn btn-lg" value="Add values" onclick="create()">
+        </div>
+    </form>
+    <span id="mytable"></span>
+
+
+</body>
+
+</html>
