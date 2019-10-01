@@ -1,0 +1,116 @@
+body {
+    background-color: moccasin;
+    margin: 20px;
+}
+
+.cycleimg {
+    margin-top: 5px;
+    border-image: 1px;
+    height: 150px;
+    margin-left: 20px;
+}
+
+.trialblog,
+.trialreview,
+.trialnews,
+.resources,
+.bikingtours {
+    height: 50px;
+}
+
+.heading {
+    background-color: moccasin;
+}
+
+.cycletext {
+    background-color: moccasin;
+    text-align: left;
+    margin-top: -20px;
+}
+
+.cycletexttag {
+    height: 20px;
+    text-align: left;
+    /* background-color: blue; */
+    margin-top: -30px;
+}
+
+.mainleft,
+.footerleft {
+    margin-left: 20px;
+}
+
+.trailinfo {
+    background-color: moccasin;
+}
+
+tr:nth-child(even) {
+    background-color: greenyellow;
+    height: 30px;
+}
+
+tr:nth-child(odd) {
+    background-color: green;
+    height: 30px;
+}
+
+.aboutauthor {
+    background-color: cyan;
+}
+
+.samporinatrail {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.maxsmith {
+    width: 100%;
+}
+
+.aboutauthor {
+    width: 100%;
+}
+
+.bikerental {
+    background-color: greenyellow;
+}
+
+img {
+    width: 100%;
+    max-height: 100%;
+}
+
+.melanietext {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(104, 12, 128);
+}
+
+li {
+    font-size: 15px;
+    display: block;
+    margin: 1px 40px;
+}
+
+.footerright {
+    align-content: right;
+}
+
+#quote {
+    background-color: azure;
+}
+
+#nick {
+    background-color: aquamarine;
+    text-align: right;
+}
+
+#ojaitrails {
+    background-color: aquamarine;
+}
+
+#ojaisubject {
+    background-color: aliceblue;
+}
+
+#coppercanyon {
+    background-color: gold;
+}
