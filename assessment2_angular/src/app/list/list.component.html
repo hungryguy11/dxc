@@ -1,0 +1,72 @@
+<div class="container">
+    <table class="table table-hover table-responsive">
+        <thead class="thead-light">
+            <tr>
+                <th>Department</th>
+                <th>Name</th>
+                <th>Group Name</th>
+
+                <th>Modified Date</th>
+                <th></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let dep of deptList ; let i =index">
+                <td>{{dep.id}}</td>
+                <td>{{dep.name}}</td>
+                <td>{{dep.group_name}}</td>
+
+                <td>{{dep.mod_date}}</td>
+                <td>
+                    <a id="edit" (click)="edit(i)" class="btn btn-sm btn-success">Edit</a>
+                    <a id="delete" (click)="delete(i)" class="btn btn-sm btn-danger">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div id="updatediv" *ngIf="updatediv">
+    <div class="container">
+        <form (ngSubmit)="edit()">
+
+            <div class="panel panel-danger">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Edit Department</h3>
+                </div>
+
+                <div class="panel-body">
+
+                    <div class="form-group">
+                        <label for="id">ID:</label>
+                        <input id="id" class="form-control" type="text" name="id" [(ngModel)]="department.id">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="fname">NAME: </label>
+                        <input id="fname" class="form-control" type="text" name="fname" [(ngModel)]="department.name">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="salary">GROUP NAME:</label>
+                        <input id="salary" class="form-control" type="text" name="salary" [(ngModel)]="department.group_name">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="dom">MODIFIED DATE:</label>
+                        <input id="dom" class="form-control" type="date" name="dom" [(ngModel)]="department.mod_date">
+                    </div>
+                </div>
+
+                <div class="panel-footer">
+                    <button class="btn btn-success" type="submit">UPDATE</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
