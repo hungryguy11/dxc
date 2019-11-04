@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -40,6 +40,29 @@ namespace ConsolidatedArchitechture
             }
             rdr.Close();
             con.Close();
+
+        }
+        public static void ReadSupplier()
+        {
+            SqlConnection con = new SqlConnection(); //for connection name
+            con.ConnectionString = @"data source =IN5CG9214WT9\MSSQLSERVER01; database = newdb_dxc; integrated security = true";
+
+            SqlCommand cmd = new SqlCommand(); // for DML command
+            cmd.CommandText = "select * from tblSupplier order by ProdId asc";
+            cmd.Connection = con;
+            con.Open();
+            SqlDataReader rdr = cmd.ExecuteReader();
+            Console.WriteLine("Product ID\t\tSupplier\t\tSupplier ID\t\tLocation\t\tPrice");
+            Console.WriteLine("------- --\t\t--------\t\t-------- --\t\t--------\t\t-----");
+            while (rdr.Read())
+            {
+                Console.WriteLine($"{RetrieveProductName((int)rdr["ProdId"])}\t\t{rdr["Name"]}\t\t{rdr["Id"]}\t\t{rdr["Location"]}\t\t{rdr["Price"]}");
+            }
+            rdr.Close();
+            con.Close();
+
+
+
 
         }
 
@@ -228,7 +251,7 @@ namespace ConsolidatedArchitechture
             int choice;
             do
             {
-                Console.WriteLine("1. New Customer Entry \t\t2. All Customer Details\t\t3.Customer Bill by ID");
+                Console.WriteLine("1. New Customer Entry \t\t2. All Customer Details\t\t3. Customer Bill by ID\t\t4. Product List\t\t5. Supplier List");
                 choice = int.Parse(Console.ReadLine());
 
                 switch(choice)
@@ -243,6 +266,14 @@ namespace ConsolidatedArchitechture
                         int id = int.Parse(Console.ReadLine());
                         DisplayBill(id);
                         Console.ReadLine();
+                        break;
+                    case 4:
+                        Console.WriteLine("----------------------------------------Product List-------------------------------------------"); 
+                        ReadProducts();
+                        break;
+                    case 5:
+                        Console.WriteLine("----------------------------------------Supplier List-------------------------------------------");
+                        ReadSupplier();
                         break;
                     default: Console.WriteLine("invalid");break;
                 }
