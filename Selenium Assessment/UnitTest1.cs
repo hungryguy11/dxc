@@ -89,7 +89,7 @@ namespace Unit_TestDemo
             }
             else
             {
-                Console.WriteLine("You are Kriti Khullar");
+                Console.WriteLine("You are VM");
                 Console.WriteLine($"Under Budget : {budget}");
             }
 
