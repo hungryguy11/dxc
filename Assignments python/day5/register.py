@@ -18,7 +18,7 @@ def sel():
     else:
         print("F")
     print(res)
-    db = pymysql.connect("localhost", "root", "", "EmployeeDetails")
+    db = pymysql.connect("localhost", "root", "", "Employee")
     cursor = db.cursor(pymysql.cursors.DictCursor)
     # data = cursor.execute("Select * from user")
     # data = cursor.execute(
